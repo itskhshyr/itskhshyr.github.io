@@ -2037,7 +2037,7 @@ pre code {
 
 .table-hover tbody tr:hover {
   color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: #00000013;
 }
 
 .table-primary,
@@ -2361,7 +2361,7 @@ pre code {
   background-color: rgba(0, 0, 0, 0.01);
   border-color: #b4add3;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(105, 90, 166, 0.25);
+  box-shadow: 0 0 0 0.2rem #695aa640;
 }
 
 .form-control::-webkit-input-placeholder {
