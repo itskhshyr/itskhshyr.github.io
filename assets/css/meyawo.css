@@ -647,6 +647,7 @@ pre code {
     opacity: 1;
     visibility: visible; /* بدون transition */
     text-wrap: nowrap;
+    color:#929292;
   }
   .skills-wrapper-card_content {
     opacity: 0;
