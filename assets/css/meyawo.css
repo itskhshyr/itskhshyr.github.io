@@ -617,6 +617,10 @@ pre code {
     width: 48px !important;
     height: 48px !important;
   }
+
+  .about-img{
+    width:240px !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5044,6 +5048,7 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0;
   }
+
 }
 
 @media (min-width: 576px) {
@@ -11604,67 +11609,93 @@ p {
   border-radius: 100px;
 }
 
-.service-card {
-  position: relative;
-  min-height: 260px;
-  border: 1px solid #dee2e6;
-  overflow: hidden;
-  border-radius: 15px;
+
+
+
+@media(max-width:760px){
+  .service-card {
+    position: relative;
+    min-height: 260px;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .service-card .body {
+    padding: 9px;
+  }
+
+  .subtitle{
+    font-size: 14px ;
+margin-top: 1rem !important;
+  }
+  .custom-title{
+    font-size: 15px !important;
+    margin-top: 20px;
+  }
 }
 
-.service-card .body {
-  padding: 9px;
-}
-
-.service-card .body img.icon {
-  margin-top: 40px;
-  width: 55px;
-  margin-bottom: 25px;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-@media (prefers-reduced-motion: reduce) {
+@media(min-width:760.9px){
+  .service-card {
+    position: relative;
+    min-height: 260px;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .service-card .body {
+    padding: 9px;
+  }
+  
   .service-card .body img.icon {
-    -webkit-transition: none;
-    transition: none;
+    margin-top: 40px;
+    width: 55px;
+    margin-bottom: 25px;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s;
   }
-}
-
-.service-card .body .subtitle {
-  position: absolute;
-  bottom: -100%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-@media (prefers-reduced-motion: reduce) {
+  
+  @media (prefers-reduced-motion: reduce) {
+    .service-card .body img.icon {
+      -webkit-transition: none;
+      transition: none;
+    }
+  }
+  
   .service-card .body .subtitle {
-    -webkit-transition: none;
-    transition: none;
+    position: absolute;
+    bottom: -100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .service-card .body .subtitle {
+      -webkit-transition: none;
+      transition: none;
+    }
+  }
+  
+  .service-card:hover .body img.icon {
+    margin-top: 1rem;
+    width: 55px;
+    margin-bottom: 15px;
+  }
+  
+  .service-card:hover .body .subtitle {
+    bottom: 7px;
+    opacity: 1;
+    visibility: visible;
+    text-align: center;
+    padding: 0 5px;
+    text-align: center;
+  }
+  .service-card:hover .custom-title {
+    visibility: hidden !important;
   }
 }
-
-.service-card:hover .body img.icon {
-  margin-top: 1rem;
-  width: 55px;
-  margin-bottom: 15px;
-}
-
-.service-card:hover .body .subtitle {
-  bottom: 7px;
-  opacity: 1;
-  visibility: visible;
-  text-align: center;
-  padding: 0 5px;
-  text-align: center;
-}
-.service-card:hover .custom-title {
-  visibility: hidden !important;
-}
-
 /*/ portfolio wrapper */
 .portfolio-card {
   display: block;
@@ -12736,9 +12767,10 @@ pre .code {
 }
 
 .about-img-holder {
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 300px;
   margin-right: 60px;
+
 }
 
 .about-img-holder .about-img {
