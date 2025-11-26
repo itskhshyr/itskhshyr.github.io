@@ -11632,6 +11632,10 @@ margin-top: 1rem !important;
     font-size: 15px !important;
     margin-top: 20px;
   }
+
+  .signiture-img{
+    width: 150px;
+  }
 }
 
 @media(min-width:760.9px){
@@ -11694,6 +11698,11 @@ margin-top: 1rem !important;
   }
   .service-card:hover .custom-title {
     visibility: hidden !important;
+  }
+
+
+  .signiture-img{
+    width: 250px;
   }
 }
 /*/ portfolio wrapper */
