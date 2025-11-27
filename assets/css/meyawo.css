@@ -621,12 +621,16 @@ pre code {
   .about-img{
     width:240px !important;
   }
+  .stay-touch-section{
+    background-color: #647CA3;background: url("../imgs/lamp-lg.png") no-repeat left bottom , #647CA3;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
+
 }
 
 @media (min-width: 992px) {
@@ -658,6 +662,14 @@ pre code {
     visibility: hidden;
     transition: opacity 0.8s ease; /* فقط opacity انیمیت می‌شود */
   }
+
+  .stay-touch-section{
+    background-color: #647CA3;background: url("../imgs/lamp.png") no-repeat left bottom , #647CA3;
+  }
+}
+
+.stay-touch-section{
+  background-color: #647CA3;
 }
 
 @media (min-width: 1200px) {
@@ -12843,3 +12855,4 @@ pre .code {
   border-radius: 15px;
   border: 1px solid #dee2e6;
 }
+
