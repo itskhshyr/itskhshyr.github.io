@@ -622,7 +622,8 @@ pre code {
     width:240px !important;
   }
   .stay-touch-section{
-    background-color: #647CA3;background: url("../imgs/lamp-lg.png") no-repeat left bottom , #647CA3;
+    background: url("../imgs/lamp-lg.svg") no-repeat left bottom , rgb(105, 90, 166,0.9);
+    background-size: contain;
   }
 }
 
@@ -664,12 +665,14 @@ pre code {
   }
 
   .stay-touch-section{
-    background-color: #647CA3;background: url("../imgs/lamp.png") no-repeat left bottom , #647CA3;
+    background: url("../imgs/lamp-lg.svg") no-repeat left center , rgb(105, 90, 166,0.9);
+    background-size: contain;
+   
   }
 }
 
 .stay-touch-section{
-  background-color: #647CA3;
+  background-color: rgb(105, 90, 166,0.9)
 }
 
 @media (min-width: 1200px) {
@@ -11819,6 +11822,7 @@ margin-top: 1rem !important;
   transition: all, 0.3s;
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   .pricing-wrapper .pricing-card {
     -webkit-transition: none;
@@ -11873,7 +11877,7 @@ margin-top: 1rem !important;
   text-align: left;
 }
 
-.pricing-card-btn {
+/* .pricing-card-btn {
   border: 1px solid #695aa6;
   border-radius: 50%;
   width: 58px;
@@ -11881,11 +11885,48 @@ margin-top: 1rem !important;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.pricing-card-btn:hover {
+
+} */
+
+
+/* .pricing-card-btn:hover {
   background-color: #695aa6;
   transition: all, 0.6s;
+} */
+
+.pricing-card-btn {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  position: relative;         /* برای absolute کردن تصاویر داخل */
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* هر دو تصویر هم اندازه باشن و در یک جا قرار بگیرن */
+.pricing-card-btn .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  transition: opacity .18s ease;
+  pointer-events: none; /* تصویر جلویی نباید موس رو بگیره */
+}
+
+/* حالت اولیه: فقط outline دیده باشه */
+.pricing-card-btn .icon.filled { opacity: 0; }
+
+/* وقتی لینک هاور شد: filled دیده، outline محو */
+.pricing-card-btn:hover .icon.filled { opacity: 1; }
+.pricing-card-btn:hover .icon.outline { opacity: 0; }
+
+
+
+
 
 .pricing-card-list_name {
   color: #444;
@@ -12855,4 +12896,5 @@ pre .code {
   border-radius: 15px;
   border: 1px solid #dee2e6;
 }
+
 
