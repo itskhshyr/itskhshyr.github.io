@@ -5118,6 +5118,11 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0;
   }
+
+  .scroll-section{
+    padding: 0px !important;
+    margin:0px !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12712,6 +12717,12 @@ pre .code {
   background-position: center center;
 }
 
+.scroll-section {
+  font-weight: bold;
+  color:#695AA6;
+  position: relative;
+  z-index: 10; /* بالاتر از overlay */
+}
 .header .overlay {
   position: absolute;
   top: 0;
@@ -12897,4 +12908,24 @@ pre .code {
   border: 1px solid #dee2e6;
 }
 
+.component-social-btn_title{
+  visibility: hidden;
+transition: 1s all;
+  
 
+}
+.component-social-btn{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  transition: width 1s ease-in-out; /* property duration timing-function */
+}
+
+.component-social-btn:hover .component-social-btn_title{
+  width:300px;
+  visibility: visible;
+}
