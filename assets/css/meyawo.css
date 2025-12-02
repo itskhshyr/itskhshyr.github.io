@@ -12,6 +12,7 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+/* @import url("../fonts/Yekan-Bakh.ttf") */
 @import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
 :root {
   --blue: #1e549f;
@@ -43,6 +44,49 @@
   --font-family-sans-serif: "Open Sans", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+}
+
+
+
+@font-face {
+  font-family: faYekan;
+  src: url("../fonts/Yekan-Bakh.ttf");
+}
+@font-face {
+  font-family: Mehr;
+  src: url("../fonts/Mahboubeh_mehravar.ttf");
+}
+@font-face {
+  font-family: koodak;
+  src: url("../fonts/B\ Koodak\ Bold_0.ttf");
+}
+@font-face {
+  font-family: koodakOutline;
+  src: url("../fonts/B\ Koodak\ Outline_0.ttf");
+}
+
+
+.paragraph-farsi{
+  font-family: faYekan;
+  direction:rtl;
+}
+.header-farsi{
+  font-family: Mehr;
+  direction:rtl;
+}
+
+.farsi-p{
+  font-family: faYekan;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.text-align-farsi p{
+  text-align: right !important;
+  padding:0 23px;
+}
+.text-align-farsi ul li{
+  text-align: right !important;
 }
 
 *,
@@ -622,8 +666,8 @@ pre code {
     width:240px !important;
   }
   .stay-touch-section{
-    background: url("../imgs/lamp-lg.svg") no-repeat left bottom , rgb(105, 90, 166,0.9);
-    background-size: contain;
+    background:  rgb(105, 90, 166,0.9);
+
   }
 }
 
@@ -665,8 +709,8 @@ pre code {
   }
 
   .stay-touch-section{
-    background: url("../imgs/lamp-lg.svg") no-repeat left center , rgb(105, 90, 166,0.9);
-    background-size: contain;
+    background: rgb(105, 90, 166,0.9);
+  
    
   }
 }
@@ -5119,11 +5163,22 @@ input[type="button"].btn-block {
     padding-left: 0;
   }
 
-  .scroll-section{
-    padding: 0px !important;
-    margin:0px !important;
-  }
+  .scroll-section {
+    position: absolute;
+    left: -10% !important;
+    transform:  translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 1;
 }
+.scroll-section.hidden {
+  opacity: 0;
+  transform:  translateY(20px); /* کمی پایین می‌ره */
+  pointer-events: none;
+}
+}
+
+
+
 
 @media (min-width: 768px) {
   .navbar-expand-md {
@@ -12722,7 +12777,52 @@ pre .code {
   color:#695AA6;
   position: relative;
   z-index: 10; /* بالاتر از overlay */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
 }
+
+.scroll-section.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* کمی پایین می‌ره */
+  pointer-events: none;
+}
+
+.scroll-section img {
+  animation: float-blink 1.5s infinite;
+  transition: opacity 0.6s ease;
+}
+
+/* انیمیشن ترکیبی: فقط حرکت عمودی + چشمک */
+@keyframes float-blink {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  25% {
+      transform: translateY(-5px); /* کمی بالا */
+      opacity: 0.6;
+  }
+  50% {
+      transform: translateY(0); /* وسط */
+      opacity: 1;
+  }
+  75% {
+      transform: translateY(5px); /* کمی پایین */
+      opacity: 0.6;
+  }
+  100% {
+      transform: translateY(0); /* برگشت به حالت اولیه */
+      opacity: 1;
+  }
+}
+
+/* وقتی کاربر اسکرول کرد */
+.scroll-section.hidden img {
+  animation: none; /* توقف انیمیشن */
+  opacity: 0;
+}
+
+
 .header .overlay {
   position: absolute;
   top: 0;
@@ -12928,4 +13028,18 @@ transition: 1s all;
 .component-social-btn:hover .component-social-btn_title{
   width:300px;
   visibility: visible;
+}
+
+
+.lang-btn{
+width:80px;
+height:45px;
+background-color: #ffff;
+border:1px solid #000;
+display :flex;
+
+}
+.lang-btn_content{
+  display:flex;
+justify-content:center;
 }
