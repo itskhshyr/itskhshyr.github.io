@@ -5175,6 +5175,9 @@ input[type="button"].btn-block {
   transform:  translateY(20px); /* کمی پایین می‌ره */
   pointer-events: none;
 }
+.flags-wrapper{
+  width:28px;
+}
 }
 
 
@@ -5223,6 +5226,10 @@ input[type="button"].btn-block {
   }
   .navbar-expand-md .navbar-toggler {
     display: none;
+  }
+
+  .flags-wrapper{
+    width:32px;
   }
 }
 
