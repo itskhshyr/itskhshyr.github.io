@@ -53,25 +53,37 @@
   src: url("../fonts/Yekan-Bakh.ttf");
 }
 @font-face {
+  font-family: faYekanBold;
+  src: url("../fonts/YekanBakhFaNum-Bold.ttf");
+}
+
+@font-face {
+  font-family: faYekanBoldExtra;
+  src: url("../fonts/YekanBakhFaNum-ExtraBlack.ttf");
+}
+/* @font-face {
   font-family: Mehr;
   src: url("../fonts/Mahboubeh_mehravar.ttf");
 }
-@font-face {
-  font-family: koodak;
-  src: url("../fonts/B\ Koodak\ Bold_0.ttf");
-}
-@font-face {
-  font-family: koodakOutline;
-  src: url("../fonts/B\ Koodak\ Outline_0.ttf");
-}
+ */
 
+.header-content-fa{
+  font-family: faYekanBoldExtra;
+  direction:rtl;
+}
+.header-subtitle-fa{
+  font-family: faYekan;
+  font-size: 24px !important;
+ 
+}
 
 .paragraph-farsi{
   font-family: faYekan;
   direction:rtl;
 }
+
 .header-farsi{
-  font-family: Mehr;
+  font-family: faYekanBold;
   direction:rtl;
 }
 
@@ -79,6 +91,11 @@
   font-family: faYekan;
   font-size: 14px;
   line-height: 2;
+}
+
+.custom-title-services-fa{
+  font-family: faYekanBold;
+  font-size: 20px !important;
 }
 
 .text-align-farsi p{
@@ -669,6 +686,11 @@ pre code {
     background:  rgb(105, 90, 166,0.9);
 
   }
+  .header-subtitle-fa{
+    font-family: faYekan;
+    font-size: 14px !important;
+   
+  }
 }
 
 @media (min-width: 768px) {
@@ -700,7 +722,7 @@ pre code {
     opacity: 1;
     visibility: visible; /* بدون transition */
     text-wrap: nowrap;
-    color:#929292;
+    color:#000;
   }
   .skills-wrapper-card_content {
     opacity: 0;
