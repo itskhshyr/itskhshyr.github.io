@@ -1,7 +1,7 @@
 // English is read from the HTML itself; other languages live in T. Elements are matched by data-i18n index.
 (function(){
 const T={fa:{dir:'rtl',m:'متر',title:'خشایار رمضانی | برنامه‌نویس فرانت‌اند',s:[
-"شما در سطح آب هستید","خشایار<br>رمضانی","برنامه‌نویس فرانت‌اند، سازنده‌ی اپلیکیشن‌هایی با React.js و Next.js.","شیرجه بزنید",
+"شما در سطح آب هستید","سلام خشایار هستم<br>","برنامه‌نویس فرانت‌اند، سازنده‌ی اپلیکیشن‌هایی با React.js و Next.js.","شیرجه بزنید",
 "درباره من",
 "توسعه‌دهنده ارشد فرانت‌اند با بیش از ۵ سال تجربه تخصصی در طراحی و توسعه وب‌اپلیکیشن‌های مقیاس‌پذیر با React.js و Next.js.",
 "مسلط به معماری‌های مدرن (SDUI، Feature-Based و Single Sign-On)، بهینه‌سازی عملکردی (Core Web Vitals و SSR/SSG/ISR) و توسعه رابط‌های کاربری پیچیده از جمله داشبوردهای سازمانی و Embedded Web Apps برای سخت‌افزارهای محدود.",
