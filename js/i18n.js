@@ -41,12 +41,14 @@ const T={fa:{dir:'rtl',m:'متر',title:'خشایار رمضانی | برنام�
 "ایمیل","گیت هاب","لینکدین","تلگرام","بازگشت به سطح آب"]}};
 const root=document.documentElement,els=[...document.querySelectorAll('[data-i18n]')],gm=document.querySelector('#gauge small'),resume=document.querySelector('#resumeLink');
 const en={dir:'ltr',m:'m',title:document.title,s:els.map(e=>e.innerHTML)};
+const faEls=[...document.querySelectorAll('[data-i18n-fa]')].map(e=>({e,english:e.innerHTML}));
 window.fd=s=>root.lang==='fa'?s.replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]):s;
 function set(l,keep){const D=l==='en'?en:T[l];if(!D||D.s.length!==els.length)return;
 const max=root.scrollHeight-innerHeight,r=max>0?scrollY/max:0;
 root.lang=l;root.dir=D.dir;
 resume.href=l==='fa'?resume.dataset.resumeFa:resume.dataset.resumeEn;
 els.forEach((e,i)=>{e.innerHTML=fd(D.s[i])});
+faEls.forEach(({e,english})=>{e.innerHTML=l==='fa'?e.dataset.i18nFa:english});
 document.title=D.title;gm.textContent=D.m;
 try{localStorage.setItem('lang',l)}catch(_){}
 if(keep)scrollTo({top:r*(root.scrollHeight-innerHeight),behavior:'instant'});

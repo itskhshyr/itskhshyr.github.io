@@ -1,132 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khashayar Ramezani | Frontend Developer</title>
-<meta name="description" content="Khashayar Ramezani, frontend developer with 5+ years of experience building scalable web applications with React.js and Next.js.">
-<meta name="theme-color" content="#020B1A">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="starfish" viewBox="0 0 100 100"><path d="M50 6l12 30 32 2-25 20 9 31-28-18-28 18 9-31L6 38l32-2z" fill="currentColor" fill-opacity=".14"/><path d="M50 24v14M27 47l12 5M73 47l-12 5M37 72l7-11M63 72l-7-11"/><circle cx="50" cy="50" r="3" fill="currentColor"/></symbol>
-<symbol id="coral" viewBox="0 0 100 130"><path d="M50 128V76M50 100L26 74M50 88L76 58M26 74L18 48M26 74L38 46M76 58L70 32M76 58L90 40"/><circle cx="18" cy="43" r="3.5" fill="currentColor"/><circle cx="38" cy="41" r="3.5" fill="currentColor"/><circle cx="70" cy="27" r="3.5" fill="currentColor"/><circle cx="90" cy="35" r="3.5" fill="currentColor"/></symbol>
-<symbol id="shell" viewBox="0 0 100 90"><path d="M8 66Q50-26 92 66Q50 80 8 66z" fill="currentColor" fill-opacity=".14"/><path d="M50 74L20 56M50 74L34 34M50 74V18M50 74L66 34M50 74L80 56"/><path d="M42 76h16l-3 9H45z"/></symbol>
-<symbol id="seaweed" viewBox="0 0 60 160"><path d="M20 158C4 130 36 112 20 84S36 36 20 6"/><path d="M40 158C28 138 54 124 42 102S54 70 46 52"/></symbol>
-<symbol id="seahorse" viewBox="0 0 80 140"><path d="M46 10C32 6 20 16 24 30c2 6 8 8 10 14-4 16-14 24-10 42 3 14 18 16 22 6 3-8-6-12-2-18 3-4 8 0 8 6 0 10-10 14-10 24"/><path d="M24 28L10 32c-3 1-2 5 1 5l14-3M44 8l10-2-4 8M36 50c-10 2-14 10-12 18M44 44c8 2 12 8 10 16"/><circle cx="33" cy="22" r="2.2" fill="currentColor"/></symbol>
-</defs></svg>
-<header><button id="lang" type="button" aria-label="Language / زبان"><span data-l="fa">FA</span> | <span data-l="en">EN</span></button></header>
-<div id="water" aria-hidden="true"><div class="rays"></div></div>
-<canvas id="ocean" aria-hidden="true"></canvas>
-<div id="gauge" aria-hidden="true"><span id="meters">0</span><small>m</small></div>
-<div id="creature" aria-hidden="true">
-<svg viewBox="0 0 60 90" width="60" height="90"><defs><radialGradient id="bell" cx="50%" cy="30%" r="70%"><stop offset="0" stop-color="#EAF8FF" stop-opacity=".95"/><stop offset=".5" stop-color="#26E6D0" stop-opacity=".6"/><stop offset="1" stop-color="#00D4FF" stop-opacity=".15"/></radialGradient></defs>
-<g class="tent"><path d="M16 34c-4 14 4 20 0 36"/><path d="M26 36c-3 16 4 24 0 44"/><path d="M36 36c3 16-4 24 0 44"/><path d="M45 34c4 14-4 20 0 36"/></g>
-<path class="bell" d="M6 34C6 14 17 4 30 4s24 10 24 30c-6-4-10 2-14-2-4 4-10 4-10 0-4 4-10 4-10 0-4 4-8-2-14 2z" fill="url(#bell)"/></svg>
-</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khashayar Ramezani | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Khashayar Ramezani, frontend developer with 5+ years of experience building scalable web applications with React.js and Next.js."
+    />
+    <meta name="theme-color" content="#020B1A" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="starfish" viewBox="0 0 100 100">
+          <path
+            d="M50 6l12 30 32 2-25 20 9 31-28-18-28 18 9-31L6 38l32-2z"
+            fill="currentColor"
+            fill-opacity=".14"
+          />
+          <path d="M50 24v14M27 47l12 5M73 47l-12 5M37 72l7-11M63 72l-7-11" />
+          <circle cx="50" cy="50" r="3" fill="currentColor" />
+        </symbol>
+        <symbol id="coral" viewBox="0 0 100 130">
+          <path
+            d="M50 128V76M50 100L26 74M50 88L76 58M26 74L18 48M26 74L38 46M76 58L70 32M76 58L90 40"
+          />
+          <circle cx="18" cy="43" r="3.5" fill="currentColor" />
+          <circle cx="38" cy="41" r="3.5" fill="currentColor" />
+          <circle cx="70" cy="27" r="3.5" fill="currentColor" />
+          <circle cx="90" cy="35" r="3.5" fill="currentColor" />
+        </symbol>
+        <symbol id="shell" viewBox="0 0 100 90">
+          <path
+            d="M8 66Q50-26 92 66Q50 80 8 66z"
+            fill="currentColor"
+            fill-opacity=".14"
+          />
+          <path d="M50 74L20 56M50 74L34 34M50 74V18M50 74L66 34M50 74L80 56" />
+          <path d="M42 76h16l-3 9H45z" />
+        </symbol>
+        <symbol id="seaweed" viewBox="0 0 60 160">
+          <path d="M20 158C4 130 36 112 20 84S36 36 20 6" />
+          <path d="M40 158C28 138 54 124 42 102S54 70 46 52" />
+        </symbol>
+        <symbol id="seahorse" viewBox="0 0 80 140">
+          <path
+            d="M46 10C32 6 20 16 24 30c2 6 8 8 10 14-4 16-14 24-10 42 3 14 18 16 22 6 3-8-6-12-2-18 3-4 8 0 8 6 0 10-10 14-10 24"
+          />
+          <path
+            d="M24 28L10 32c-3 1-2 5 1 5l14-3M44 8l10-2-4 8M36 50c-10 2-14 10-12 18M44 44c8 2 12 8 10 16"
+          />
+          <circle cx="33" cy="22" r="2.2" fill="currentColor" />
+        </symbol>
+      </defs>
+    </svg>
+    <header>
+      <button id="lang" type="button" aria-label="Language / زبان">
+        <span data-l="fa">FA</span> | <span data-l="en">EN</span>
+      </button>
+    </header>
+    <div id="water" aria-hidden="true"><div class="rays"></div></div>
+    <canvas id="ocean" aria-hidden="true"></canvas>
+    <div id="gauge" aria-hidden="true">
+      <span id="meters">0</span><small>m</small>
+    </div>
+    <div id="creature" aria-hidden="true">
+      <svg viewBox="0 0 60 90" width="60" height="90">
+        <defs>
+          <radialGradient id="bell" cx="50%" cy="30%" r="70%">
+            <stop offset="0" stop-color="#EAF8FF" stop-opacity=".95" />
+            <stop offset=".5" stop-color="#26E6D0" stop-opacity=".6" />
+            <stop offset="1" stop-color="#00D4FF" stop-opacity=".15" />
+          </radialGradient>
+        </defs>
+        <g class="tent">
+          <path d="M16 34c-4 14 4 20 0 36" />
+          <path d="M26 36c-3 16 4 24 0 44" />
+          <path d="M36 36c3 16-4 24 0 44" />
+          <path d="M45 34c4 14-4 20 0 36" />
+        </g>
+        <path
+          class="bell"
+          d="M6 34C6 14 17 4 30 4s24 10 24 30c-6-4-10 2-14-2-4 4-10 4-10 0-4 4-10 4-10 0-4 4-8-2-14 2z"
+          fill="url(#bell)"
+        />
+      </svg>
+    </div>
 
-<main>
-<section class="scene hero" id="surface">
-<p class="kicker" data-i18n="0">You are at the surface</p>
-<h1 data-i18n="1">Hi I'm <br class="title-styles"> Khashayar<br class="title-styles">Ramezani</h1>
-<p class="role" data-i18n="2">Frontend developer building React.js and Next.js applications.</p>
-<a class="dive" href="#about" data-i18n="3">Dive in <img src="/assets/icons//diver.png" class="diver-icon"/></a>
-</section>
+    <main>
+      <section class="scene hero" id="surface">
+        <p class="kicker" data-i18n="0">You are at the surface</p>
+        <h1 data-i18n="1">
+          Hi I'm <br class="title-styles" />
+          Khashayar<br class="title-styles" />Ramezani
+        </h1>
+        <p class="role" data-i18n="2">
+          Frontend developer building React.js and Next.js applications.
+        </p>
+        <a class="dive" href="#about" data-i18n="3"
+          >Dive in <img src="/assets/icons//diver.png" class="diver-icon"
+        /></a>
+      </section>
 
-<section class="scene" id="about"><svg class="deco sh float" aria-hidden="true"><use href="#seahorse"/></svg>
-<div class="panel reveal" data-speed="0.04">
-<h2 data-i18n="4">About</h2>
-<p data-i18n="5">I'm a senior frontend developer with 5+ years of experience designing and building scalable web applications with React.js and Next.js.</p>
-<p data-i18n="6">I work with modern architectures such as server-driven UI, feature-based structure and single sign-on, and I optimize for Core Web Vitals using SSR, SSG and ISR. I build complex interfaces, including enterprise dashboards and embedded web apps for limited hardware.</p>
-<p data-i18n="7">I enjoy solving technical challenges, writing clean code, and working closely with product and backend teams in Scrum environments.</p>
-<p class="meta" data-i18n="8">Based in Mashhad, Iran. English: advanced. German: A2.</p>
-<a class="btn" id="resumeLink" href="/assets/files/Khashayar_Ramezani_Resume-en.pdf" data-resume-fa="/assets/files/MyResume-FA.pdf" data-resume-en="/assets/files/Khashayar_Ramezani_Resume-en.pdf" target="_blank" rel="noopener" data-i18n="9">Download resume</a>
-</div>
-</section>
+      <section class="scene" id="about">
+        <svg class="deco sh float" aria-hidden="true">
+          <use href="#seahorse" />
+        </svg>
+        <div class="panel reveal" data-speed="0.04">
+          <h2 data-i18n="4">About</h2>
+          <p data-i18n="5">
+            I'm a senior frontend developer with 5+ years of experience
+            designing and building scalable web applications with React.js and
+            Next.js.
+          </p>
+          <p data-i18n="6">
+            I work with modern architectures such as server-driven UI,
+            feature-based structure and single sign-on, and I optimize for Core
+            Web Vitals using SSR, SSG and ISR. I build complex interfaces,
+            including enterprise dashboards and embedded web apps for limited
+            hardware.
+          </p>
+          <p data-i18n="7">
+            I enjoy solving technical challenges, writing clean code, and
+            working closely with product and backend teams in Scrum
+            environments.
+          </p>
+          <p class="meta" data-i18n="8">
+            Based in Mashhad, Iran. English: advanced. German: A2.
+          </p>
+          <a
+            class="btn"
+            id="resumeLink"
+            href="/assets/files/Khashayar_Ramezani_Resume-en.pdf"
+            data-resume-fa="/assets/files/MyResume-FA.pdf"
+            data-resume-en="/assets/files/Khashayar_Ramezani_Resume-en.pdf"
+            target="_blank"
+            rel="noopener"
+            data-i18n="9"
+            >Download resume</a
+          >
+        </div>
+      </section>
 
-<section class="scene" id="skills">
-<h2 class="reveal" data-i18n="10">What I work with</h2>
-<div class="reefs">
-<div class="reef reveal"><h3 data-i18n="11">Core</h3><ul class="reveal_ui-items"><li>React.js</li><li>Next.js</li><li>TypeScript</li><li>HTML</li><li>CSS</li></ul></div>
-<div class="reef reveal"><h3 data-i18n="12">UI development</h3><ul class="reveal_ui-items"><li>Tailwind CSS</li><li>Ant Design</li><li>Material UI</li><li>Bootstrap</li><li>Figma</li></ul></div>
-<div class="reef reveal"><h3 data-i18n="13">State and data</h3><ul class="reveal_ui-items"><li>Redux</li><li>Zustand</li><li>React Query</li><li>Context API</li><li>RESTful APIs</li></ul></div>
-<div class="reef reveal"><h3 data-i18n="14">Tools and practice</h3><ul class="reveal_ui-items"><li>GitHub</li><li>GitLab</li><li>CI/CD</li><li>SonarQube</li><li>Scrum</li></ul></div>
-</div>
-</section>
+      <section class="scene" id="skills">
+        <h2 class="reveal" data-i18n="10">What I work with</h2>
+        <div class="reefs">
+          <div class="reef reveal">
+            <h3 data-i18n="11">Core</h3>
+            <ul class="reveal_ui-items">
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <div class="reef reveal">
+            <h3 data-i18n="12">UI development</h3>
+            <ul class="reveal_ui-items">
+              <li>Tailwind CSS</li>
+              <li>Ant Design</li>
+              <li>Material UI</li>
+              <li>Bootstrap</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="reef reveal">
+            <h3 data-i18n="13">State and data</h3>
+            <ul class="reveal_ui-items">
+              <li>Redux</li>
+              <li>Zustand</li>
+              <li>React Query</li>
+              <li>Context API</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+          <div class="reef reveal">
+            <h3 data-i18n="14">Tools and practice</h3>
+            <ul class="reveal_ui-items">
+              <li>GitHub</li>
+              <li>GitLab</li>
+              <li>CI/CD</li>
+              <li>SonarQube</li>
+              <li>Scrum</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-<section class="scene" id="journey">
-<h2 class="reveal" data-i18n="15">Experience</h2>
-<ol class="stations">
-<li class="reveal"><time data-i18n="16">Dec 2025 to present</time><h3 data-i18n="17">Front-End Developer, Seepan (Sedroos Holding)</h3><p data-i18n="18">Mashhad</p>
-<ul><li data-i18n="19">Architect and build the frontend of scalable platforms with React.js and Next.js.</li><li data-i18n="20">Designed and implemented an identity and role-based access control (RBAC) system on a modern Next.js architecture.</li><li data-i18n="21">Build and optimize admin panels, landing pages and the main Seepan website, with a focus on UX/UI and responsive design using Tailwind CSS and Ant Design.</li><li data-i18n="22">Take part in the full software development lifecycle in a Scrum team, manage code in GitLab and run CI/CD flows.</li><li data-i18n="23">Monitor code quality with tools such as SonarQube and resolve complex technical challenges.</li></ul></li>
-<li class="reveal"><time data-i18n="24">Apr 2023 to Mar 2025</time><h3 data-i18n="25">Front-End Developer, Danesh Avaran Educational Technology</h3><p data-i18n="26">Mashhad</p>
-<ul><li data-i18n="27">Built digital signage systems and custom apps for enterprise smart kiosks.</li><li data-i18n="28">Designed and developed queueing and integrated payment systems, connecting Arduino boards directly to a React.js interface.</li><li data-i18n="29">Contributed to an AI-powered advertising analytics panel that detects age, gender and facial expressions to measure ad effectiveness.</li><li data-i18n="30">Standardized the development cycle and improved software engineering processes.</li></ul></li>
-<li class="reveal"><time data-i18n="31">Jan 2022 to Mar 2023</time><h3 data-i18n="32">Front-End Developer, MyLab724</h3><p data-i18n="33">Mashhad. My first professional frontend job, at a HealthTech startup.</p>
-<ul><li data-i18n="34">Built the official website and specialized medical dashboards for an AI-based medical test analysis platform.</li><li data-i18n="35">Helped design and develop responsive React.js interfaces so users could reach lab services from home.</li><li data-i18n="36">Worked closely with product and backend teams across the full product cycle from the early phases.</li></ul></li>
-</ol>
-<p class="meta reveal edu" data-i18n="37">Education: B.Sc. in Computer Engineering (Software), University of Torbat Heydarieh, Sep 2017 to Dec 2022. Course: front-end programming at the International Informatics Institute (i3center), 2021.</p>
-</section>
+      <section class="scene" id="journey">
+        <h2 class="reveal" data-i18n="15">Experience</h2>
+        <ol class="stations">
+          <li class="reveal">
+            <time data-i18n="16">Dec 2025 to present</time>
+            <h3 data-i18n="17">
+              Front-End Developer, Seepan (Sedroos Holding)
+            </h3>
+            <p data-i18n="18">Mashhad</p>
+            <ul>
+              <li data-i18n="19">
+                Architect and build the frontend of scalable platforms with
+                React.js and Next.js.
+              </li>
+              <li data-i18n="20">
+                Designed and implemented an identity and role-based access
+                control (RBAC) system on a modern Next.js architecture.
+              </li>
+              <li data-i18n="21">
+                Build and optimize admin panels, landing pages and the main
+                Seepan website, with a focus on UX/UI and responsive design
+                using Tailwind CSS and Ant Design.
+              </li>
+              <li data-i18n="22">
+                Take part in the full software development lifecycle in a Scrum
+                team, manage code in GitLab and run CI/CD flows.
+              </li>
+              <li data-i18n="23">
+                Monitor code quality with tools such as SonarQube and resolve
+                complex technical challenges.
+              </li>
+            </ul>
+          </li>
+          <li class="reveal">
+            <time data-i18n="24">Apr 2023 to Mar 2025</time>
+            <h3 data-i18n="25">
+              Front-End Developer, Danesh Avaran Educational Technology
+            </h3>
+            <p data-i18n="26">Mashhad</p>
+            <ul>
+              <li data-i18n="27">
+                Built digital signage systems and custom apps for enterprise
+                smart kiosks.
+              </li>
+              <li data-i18n="28">
+                Designed and developed queueing and integrated payment systems,
+                connecting Arduino boards directly to a React.js interface.
+              </li>
+              <li data-i18n="29">
+                Contributed to an AI-powered advertising analytics panel that
+                detects age, gender and facial expressions to measure ad
+                effectiveness.
+              </li>
+              <li data-i18n="30">
+                Standardized the development cycle and improved software
+                engineering processes.
+              </li>
+            </ul>
+          </li>
+          <li class="reveal">
+            <time data-i18n="31">Jan 2022 to Mar 2023</time>
+            <h3 data-i18n="32">Front-End Developer, MyLab724</h3>
+            <p data-i18n="33">
+              Mashhad. My first professional frontend job, at a HealthTech
+              startup.
+            </p>
+            <ul>
+              <li data-i18n="34">
+                Built the official website and specialized medical dashboards
+                for an AI-based medical test analysis platform.
+              </li>
+              <li data-i18n="35">
+                Helped design and develop responsive React.js interfaces so
+                users could reach lab services from home.
+              </li>
+              <li data-i18n="36">
+                Worked closely with product and backend teams across the full
+                product cycle from the early phases.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p class="meta reveal edu" data-i18n="37">
+          Education: B.Sc. in Computer Engineering (Software), University of
+          Torbat Heydarieh, Sep 2017 to Dec 2022. Course: front-end programming
+          at the International Informatics Institute (i3center), 2021.
+        </p>
+      </section>
 
-<section class="scene education-scene" id="education">
-<h2 class="reveal">Education</h2>
+      <section class="scene education-scene" id="education">
+<h2 class="reveal" data-i18n-fa="تحصیلات">Education</h2>
 <ol class="stations education-stations">
 <li class="reveal">
-<time>Sep 2017 to Dec 2022</time>
-<h3>B.Sc. in Computer Engineering (Software), University of Torbat Heydarieh</h3>
-<p>Torbat Heydarieh</p>
+<time data-i18n-fa="مهر ۱۳۹۶ تا آذر ۱۴۰۱">Sep 2017 to Dec 2022</time>
+<h3 data-i18n-fa="کارشناسی مهندسی کامپیوتر (نرم‌افزار)، دانشگاه تربت حیدریه">B.Sc. in Computer Engineering (Software), University of Torbat Heydarieh</h3>
+<p data-i18n-fa="تربت حیدریه">Torbat Heydarieh</p>
 <ul>
-<li>Completed a Bachelor's degree focused on software engineering, computer science fundamentals and application development.</li>
-<li>Built a strong foundation in programming, databases, algorithms and software engineering throughout the university program.</li>
+<li data-i18n-fa="اخذ مدرک کارشناسی با تمرکز بر مهندسی نرم‌افزار، مبانی علوم کامپیوتر و توسعه اپلیکیشن.">Completed a Bachelor's degree focused on software engineering, computer science fundamentals and application development.</li>
+<li data-i18n-fa="ایجاد پایه‌ای قوی در برنامه‌نویسی، پایگاه داده، الگوریتم‌ها و مهندسی نرم‌افزار در طول دوره دانشگاه.">Built a strong foundation in programming, databases, algorithms and software engineering throughout the university program.</li>
 </ul>
 </li>
 <li class="reveal">
-<time>Sep 2021 to Aug 2022</time>
-<h3>Full-Stack Web Development, International Informatics Institute (i3center)</h3>
-<p>Tehran</p>
+<time data-i18n-fa="مهر ۱۴۰۰ تا مرداد ۱۴۰۱">Sep 2021 to Aug 2022</time>
+<h3 data-i18n-fa="دوره توسعه وب Full-Stack، مؤسسه بین‌المللی انفورماتیک (i3center)">Full-Stack Web Development, International Informatics Institute (i3center)</h3>
+<p data-i18n-fa="تهران">Tehran</p>
 <ul>
-<li>Successfully completed an intensive full-stack web development program covering UI/UX fundamentals, HTML5, CSS3, JavaScript, jQuery, AJAX, Bootstrap, React.js, Node.js, MongoDB and PostgreSQL.</li>
-<li>Gained practical experience through multiple hands-on projects with a focus on modern frontend development and the React.js ecosystem.</li>
+<li data-i18n-fa="با موفقیت یک دوره فشرده توسعه وب Full-Stack را با مباحثی مانند UI/UX، HTML5، CSS3، JavaScript، jQuery، AJAX، Bootstrap، React.js، Node.js، MongoDB و PostgreSQL به پایان رساندم.">Successfully completed an intensive full-stack web development program covering UI/UX fundamentals, HTML5, CSS3, JavaScript, jQuery, AJAX, Bootstrap, React.js, Node.js, MongoDB and PostgreSQL.</li>
+<li data-i18n-fa="از طریق چندین پروژه عملی، تجربه کاربردی در توسعه مدرن فرانت‌اند و اکوسیستم React.js به دست آوردم.">Gained practical experience through multiple hands-on projects with a focus on modern frontend development and the React.js ecosystem.</li>
 </ul>
 </li>
 <li class="reveal">
-<time>Jun 2024 to Aug 2024</time>
-<h3>UI/UX Course, Tehran Institute of Technology</h3>
-<p>Tehran</p>
+<time data-i18n-fa="خرداد ۱۴۰۳ تا مرداد ۱۴۰۳">Jun 2024 to Aug 2024</time>
+<h3 data-i18n-fa="دوره UI/UX، مجتمع فنی تهران">UI/UX Course, Tehran Institute of Technology</h3>
+<p data-i18n-fa="تهران">Tehran</p>
 <ul>
-<li>Completed a 40-hour UI/UX course focused on user experience principles, user flow, information architecture and usability.</li>
-<li>Strengthened frontend design skills and learned to build more intuitive, user-centered interfaces.</li>
+<li data-i18n-fa="یک دوره ۴۰ ساعته UI/UX با تمرکز بر اصول تجربه کاربری، جریان کاربر، معماری اطلاعات و کاربردپذیری را به پایان رساندم.">Completed a 40-hour UI/UX course focused on user experience principles, user flow, information architecture and usability.</li>
+<li data-i18n-fa="مهارت‌های طراحی فرانت‌اند را تقویت کردم و یاد گرفتم رابط‌هایی ساده‌تر و کاربرمحورتر ایجاد کنم.">Strengthened frontend design skills and learned to build more intuitive, user-centered interfaces.</li>
 </ul>
 </li>
 </ol>
 </section>
 
-<section class="scene" id="projects"><svg class="deco c1" aria-hidden="true"><use href="#coral"/></svg><svg class="deco c2" aria-hidden="true"><use href="#coral"/></svg><svg class="deco sf" aria-hidden="true"><use href="#starfish"/></svg>
-<h2 class="reveal" data-i18n="38">Projects</h2>
-<div class="deep-cards">
-<article class="card reveal"><h3 data-i18n="39">Seepan</h3><p data-i18n="40">A multilingual platform for discovering, presenting and booking city experiences and events. I developed the frontend with Next.js, React and TypeScript: App Router with SSR/CSR, server-driven UI, Google login with token-based auth, cart and checkout, search, maps, booking and payment.</p><a href="https://seepan.ir/fa/home" target="_blank" rel="noopener" data-i18n="41">Visit seepan.ir</a></article>
-<article class="card reveal"><h3 data-i18n="42">Qeshm Blue Club</h3><p data-i18n="43">A web-based ticketing system that connects self-service kiosks and POS devices. Visitors choose tickets, pay and get printed tickets instantly. Managers monitor sales, transactions and user activity in a real-time dashboard.</p></article>
-<article class="card reveal"><h3 data-i18n="44">Digital Signage</h3><p data-i18n="45">Information-display software for train stations and airports, built for Shiraz Railway. Managers control content from a dashboard; screens show time, weather, maps and polls with separate reports.</p></article>
-<article class="card reveal"><h3 data-i18n="46">AI Face Analytics</h3><p data-i18n="47">A digital advertising app that reads age, gender and emotion from a webcam. A dedicated dashboard charts ad performance and viewer reactions to support data-driven campaign decisions.</p></article>
-<article class="card reveal"><h3 data-i18n="48">MyLab724</h3><p data-i18n="49">The website and dashboards for a HealthTech startup: main site, admin, specialist doctor and user dashboards. Users scan urine test strips at home, get referred to a specialist and book online consultations. My first professional project, built with React.js.</p></article>
-</div>
-</section>
+      <section class="scene" id="projects">
+        <svg class="deco c1" aria-hidden="true"><use href="#coral" /></svg
+        ><svg class="deco c2" aria-hidden="true"><use href="#coral" /></svg
+        ><svg class="deco sf" aria-hidden="true"><use href="#starfish" /></svg>
+        <h2 class="reveal" data-i18n="38">Projects</h2>
+        <div class="deep-cards">
+          <article class="card reveal">
+            <h3 data-i18n="39">Seepan</h3>
+            <p data-i18n="40">
+              A multilingual platform for discovering, presenting and booking
+              city experiences and events. I developed the frontend with
+              Next.js, React and TypeScript: App Router with SSR/CSR,
+              server-driven UI, Google login with token-based auth, cart and
+              checkout, search, maps, booking and payment.
+            </p>
+            <a
+              href="https://seepan.ir/fa/home"
+              target="_blank"
+              rel="noopener"
+              data-i18n="41"
+              >Visit seepan.ir</a
+            >
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="42">Qeshm Blue Club</h3>
+            <p data-i18n="43">
+              A web-based ticketing system that connects self-service kiosks and
+              POS devices. Visitors choose tickets, pay and get printed tickets
+              instantly. Managers monitor sales, transactions and user activity
+              in a real-time dashboard.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="44">Digital Signage</h3>
+            <p data-i18n="45">
+              Information-display software for train stations and airports,
+              built for Shiraz Railway. Managers control content from a
+              dashboard; screens show time, weather, maps and polls with
+              separate reports.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="46">AI Face Analytics</h3>
+            <p data-i18n="47">
+              A digital advertising app that reads age, gender and emotion from
+              a webcam. A dedicated dashboard charts ad performance and viewer
+              reactions to support data-driven campaign decisions.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="48">MyLab724</h3>
+            <p data-i18n="49">
+              The website and dashboards for a HealthTech startup: main site,
+              admin, specialist doctor and user dashboards. Users scan urine
+              test strips at home, get referred to a specialist and book online
+              consultations. My first professional project, built with React.js.
+            </p>
+          </article>
+        </div>
+      </section>
 
-<section class="scene" id="contact"><svg class="deco w1" aria-hidden="true"><use href="#seaweed"/></svg><svg class="deco w2" aria-hidden="true"><use href="#seaweed"/></svg><svg class="deco sl" aria-hidden="true"><use href="#shell"/></svg>
-<h2 class="reveal" data-i18n="50">Let's talk</h2>
-<p class="lede reveal" data-i18n="51">If you're hiring for a React or Next.js role, I'd like to hear about it.</p>
-<ul class="links reveal">
-<li class="n1"><a href="mailto:khashayarrm1999@gmail.com"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg><span class="tip" data-i18n="52">Email</span></a></li>
-<li class="n2"><a href="https://github.com/itskhshyr" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg><span class="tip" data-i18n="53">GitHub</span></a></li>
-<li class="n3"><a href="https://www.linkedin.com/in/khashayar-ramezani-127213235/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg><span class="tip" data-i18n="54">LinkedIn</span></a></li>
-<li class="n4"><a href="https://t.me/Khashayarrmz" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></svg><span class="tip" data-i18n="55">Telegram</span></a></li>
-</ul>
-<button class="btn up" id="surfaceBtn" type="button" data-i18n="56">Return to the surface</button>
-</section>
-</main>
-<script src="js/ocean.js"></script>
-<script src="js/cursor-creature.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
-</body>
+      <section class="scene" id="contact">
+        <svg class="deco w1" aria-hidden="true"><use href="#seaweed" /></svg
+        ><svg class="deco w2" aria-hidden="true"><use href="#seaweed" /></svg
+        ><svg class="deco sl" aria-hidden="true"><use href="#shell" /></svg>
+        <h2 class="reveal" data-i18n="50">Let's talk</h2>
+        <p class="lede reveal" data-i18n="51">
+          If you're hiring for a React or Next.js role, I'd like to hear about
+          it.
+        </p>
+        <ul class="links reveal">
+          <li class="n1">
+            <a href="mailto:khashayarrm1999@gmail.com"
+              ><svg viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                /></svg
+              ><span class="tip" data-i18n="52">Email</span></a
+            >
+          </li>
+          <li class="n2">
+            <a
+              href="https://github.com/itskhshyr"
+              target="_blank"
+              rel="noopener"
+              ><svg viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                /></svg
+              ><span class="tip" data-i18n="53">GitHub</span></a
+            >
+          </li>
+          <li class="n3">
+            <a
+              href="https://www.linkedin.com/in/khashayar-ramezani-127213235/"
+              target="_blank"
+              rel="noopener"
+              ><svg viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg
+              ><span class="tip" data-i18n="54">LinkedIn</span></a
+            >
+          </li>
+          <li class="n4">
+            <a href="https://t.me/Khashayarrmz" target="_blank" rel="noopener"
+              ><svg viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+                /></svg
+              ><span class="tip" data-i18n="55">Telegram</span></a
+            >
+          </li>
+        </ul>
+        <button class="btn up" id="surfaceBtn" type="button" data-i18n="56">
+          Return to the surface
+        </button>
+      </section>
+    </main>
+    <script src="js/ocean.js"></script>
+    <script src="js/cursor-creature.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
